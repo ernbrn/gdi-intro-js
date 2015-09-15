@@ -47,18 +47,21 @@
             <section>
                 <h3>Review</h3>
                 <p>In this code, spot the comments, variables, operator, function, argument, and return value.</p>
-                <pre><code>
-function calculateTip(total) {
+								<div data-height="268" data-theme-id="7588" data-slug-hash="f2d925c5959fe3f265e10e025a6c93f7" data-default-tab="js" data-user="danlucas" class='codepen'><pre><code>function calculateTip(total) {
     var tipPercent = 0.15; //Can be changed
     return (total * tipPercent);
 }
 
 var billPreTip = 10;
-var billTip = calculateTip(billPreTip);
-var receipt = 'Meal: ' + billPreTip + ' Tip: ' + billTip +
-    ' Total: ' + (billPreTip + billTip);
-console.log(receipt);
-				</code></pre>
+var billTip   = calculateTip(billPreTip);
+var receipt   = &#39;Meal: &#39; + billPreTip + &#39; Tip: &#39; + billTip +
+    &#39; Total: &#39; + (billPreTip + billTip);
+
+
+var result = document.getElementById(&#39;tip&#39;);
+result.innerHTML = receipt;</code></pre>
+<p>See the Pen <a href='http://codepen.io/danlucas/pen/f2d925c5959fe3f265e10e025a6c93f7/'>Class 2 - Slide 1 - Review</a> by danlucas (<a href='http://codepen.io/danlucas'>@danlucas</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+</div><script async src="//assets.codepen.io/assets/embed/ei.js"></script>
             </section>
 
             <section>
@@ -67,28 +70,30 @@ console.log(receipt);
             </section>
             <section>
                 <h3>Global Scope</h3>
-                <p>A variable declared outside a function has a <span class="yellow">global</span> scope and can be accessed anywhere, even in a function.</p>
-                  <pre><code>
-var awesomeGroup = 'Girl Develop It'; //Global scope
+                <p>A variable declared outside a function has a <span class="yellow">global</span> scope and can be accessed anywhere, even in a function.</p><div data-height="268" data-theme-id="7588" data-slug-hash="bfe0ae9370ea1c35c9920f11e039478e" data-default-tab="js" data-user="danlucas" class='codepen'><pre><code>var awesomeGroup = &#39;Girl Develop It&#39;; //Global scope
 function whatIsAwesome() {
-    console.log (awesomeGroup + ' is pretty awesome.'); //Will work
+  var awesome = document.getElementById(&#39;what-is-awesome&#39;);
+  awesome.innerHTML = awesomeGroup + &#39; is pretty awesome.&#39;;
+  // console.log (awesomeGroup + &#39; is pretty awesome.&#39;); //Will work
 }
-whatIsAwesome();
-
-				</code></pre>
+whatIsAwesome();</code></pre>
+<p>See the Pen <a href='http://codepen.io/danlucas/pen/bfe0ae9370ea1c35c9920f11e039478e/'>Class 2 - Slide 3 - Global Scope</a> by danlucas (<a href='http://codepen.io/danlucas'>@danlucas</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+</div><script async src="//assets.codepen.io/assets/embed/ei.js"></script>
             </section>
             <section>
                 <h3>Local Scope</h3>
                 <p>A variable declared within a function has a <span class="yellow">local</span> scope and can only be accessed within that function.</p>
-                <pre><code>
+								<div data-height="268" data-theme-id="7588" data-slug-hash="cc37b30a07a52fb3c20608100db5cc5b" data-default-tab="js" data-user="danlucas" class='codepen'><pre><code>var awesome = document.getElementById(&#39;what-is-awesome&#39;);
+
 function whatIsAwesome() {
-    var awesomeGroup = 'Girl Develop It'; //Local scope
-    console.log ('I made a variable called awesomeGroup with a value of ' + awesomeGroup); //Will work
+    var awesomeGroup = &#39;Girl Develop It&#39;; //Local scope
+    awesome.innerHTML = &#39;I made a variable called awesomeGroup with a value of &#39; + awesomeGroup; // Will work
 }
-<!--on the slide, line 84 has a purple { and it's closing bracket } on line 87 is white. do they need to be the same color?-->
+
 whatIsAwesome();
-console.log (awesomeGroup + ' is pretty awesome.'); //Won't work
-				</code></pre>
+awesome.innerHTML = awesomeGroup + &#39; is pretty awesome.&#39;; // Won&#39;t work</code></pre>
+<p>See the Pen <a href='http://codepen.io/danlucas/pen/cc37b30a07a52fb3c20608100db5cc5b/'>cc37b30a07a52fb3c20608100db5cc5b</a> by danlucas (<a href='http://codepen.io/danlucas'>@danlucas</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+</div><script async src="//assets.codepen.io/assets/embed/ei.js"></script>
             </section>
 
             <section>
@@ -109,12 +114,13 @@ if (condition) {
   // statements to execute
 }
 				</code></pre>
-                <pre><code>
-var bananas = 5;
-if (bananas &gt; 0) {
-  console.log ('You have some bananas!');
-}
-				</code></pre>
+				<div data-height="268" data-theme-id="7588" data-slug-hash="3eb93a1d1bb697673060404882a4db8a" data-default-tab="js" data-user="danlucas" class='codepen'><pre><code>var bananas = 5;
+				var gotBananas = document.getElementById(&#39;got-bananas&#39;);
+				if (bananas &gt; 0) {
+				  gotBananas.innerHTML = &#39;You have some bananas!&#39;;
+				}</code></pre>
+				<p>See the Pen <a href='http://codepen.io/danlucas/pen/3eb93a1d1bb697673060404882a4db8a/'>Class 2 - Slide 6 - The IF Statement</a> by danlucas (<a href='http://codepen.io/danlucas'>@danlucas</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+				</div><script async src="//assets.codepen.io/assets/embed/ei.js"></script>
             </section>
             <section>
 				<h3>Comparison Operators</h3>
@@ -184,32 +190,33 @@ if (bananas &gt; 0) {
             <section>
                 <h3>The if/else statement</h3>
                 <p>Use else to provide an alternate set of instructions.</p>
-                <pre><code>
-var age = 28;
+								<div data-height="268" data-theme-id="7588" data-slug-hash="1650349a9ee58842aedf9f7cbd2856f3" data-default-tab="js" data-user="danlucas" class='codepen'><pre><code>var age = 28;
+var canIDrive = document.getElementById(&#39;can-i-drive&#39;);
 if (age &gt;= 16) {
-    console.log ('Yay, you can drive!');
+    canIDrive.innerHTML = &#39;Yay, you can drive!&#39;;
 } else {
-    console.log ('Sorry, but you have ' + (16 - age) +
-    ' years until you can drive.');
-}
-				</code></pre>
+    canIDrive.innerHTML = &#39;Sorry, but you have &#39; + (16 - age) +
+    &#39; years until you can drive.&#39;;
+}</code></pre>
+<p>See the Pen <a href='http://codepen.io/danlucas/pen/1650349a9ee58842aedf9f7cbd2856f3/'>Class 2 - Slide 10 - The If/Else Statement</a> by danlucas (<a href='http://codepen.io/danlucas'>@danlucas</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+</div><script async src="//assets.codepen.io/assets/embed/ei.js"></script>
             </section>
             <section>
                 <h3>The if/else if/else statement</h3>
                 <p>If you have multiple conditions, you can use else if.</p>
-                <pre><code>
-var age = 20;
+								<div data-height="268" data-theme-id="7588" data-slug-hash="35f4a573bb1dcd26173a0fdfd54b4c9b" data-default-tab="js" data-user="danlucas" class='codepen'><pre><code>var age = 20;
+var canIVote = document.getElementById(&#39;can-i-vote&#39;);
 if (age &gt;= 35) {
-    console.log('You can vote AND hold any place in government!');
+   canIVote.innerHTML = &#39;You can vote AND hold any place in government!&#39;;
 } else if (age &gt;= 25) {
-    console.log('You can vote AND run for the Senate!');
+    canIVote.innerHTML = &#39;You can vote AND run for the Senate!&#39;;
 } else if (age &gt;= 18) {
-    console.log('You can vote!');
+    canIVote.innerHTML = &#39;You can vote!&#39;;
 } else {
-    console.log('You can\'t vote, but you can
-    still write your representatives.');
-}
-				</code></pre>
+    canIVote.innerHTML = &#39;You can\&#39;t vote, but you can still write your representatives.&#39;;
+}</code></pre>
+<p>See the Pen <a href='http://codepen.io/danlucas/pen/35f4a573bb1dcd26173a0fdfd54b4c9b/'>Class 2 - Slide 11 - The If/Else If/Else Statement</a> by danlucas (<a href='http://codepen.io/danlucas'>@danlucas</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+</div><script async src="//assets.codepen.io/assets/embed/ei.js"></script>
             </section>
              <section>
 				<h3>Let's Develop It</h3>
@@ -253,14 +260,15 @@ if (age &gt;= 35) {
             <section>
                 <h3>Using logical operators</h3>
                 <p>You can use these operators to combine conditions.</p>
-                <pre><code>
-var bananas = 5;
-if (bananas &gt;=2 &amp;&amp; bananas &lt;7) {
-    console.log ('You have a reasonable number of bananas');
-} else {
-    console.log ('Check your banana supply');
-}
-				</code></pre>
+								<div data-height="268" data-theme-id="7588" data-slug-hash="ed8d21ef92f744aa79d633cf2d299b94" data-default-tab="js" data-user="danlucas" class='codepen'><pre><code>var bananas = 5;
+								var bananaSupply = document.getElementById(&#39;bananas&#39;);
+								if (bananas &gt;=2 &amp;&amp; bananas &lt;7) {
+								    bananaSupply.innerHTML = &#39;You have a reasonable number of bananas&#39;;
+								} else {
+								     bananaSupply.innerHTML = &#39;Check your banana supply&#39;;
+								}</code></pre>
+								<p>See the Pen <a href='http://codepen.io/danlucas/pen/ed8d21ef92f744aa79d633cf2d299b94/'>Class 2 - Slide 14 - Using Logical Operators</a> by danlucas (<a href='http://codepen.io/danlucas'>@danlucas</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+								</div><script async src="//assets.codepen.io/assets/embed/ei.js"></script>
             </section>
             <section>
 				<h3>Let's Develop It</h3>
@@ -270,13 +278,17 @@ if (bananas &gt;=2 &amp;&amp; bananas &lt;7) {
             <section>
                 <h3>While loops</h3>
                 <p>While will repeat the same code over and over until some condition is met.</p>
-                <pre><code>
-var bottlesOfBeer = 99;
-while (bottlesOfBeer &gt;= 1) {
-    console.log (bottlesOfBeer + ' bottles of beer on the wall');
-    bottlesOfBeer = bottlesOfBeer - 9;
-}
-				</code></pre>
+								<div data-height="268" data-theme-id="7588" data-slug-hash="ae928eca3b3dd6e175b81abd48cdca3b" data-default-tab="js" data-user="danlucas" class='codepen'><pre><code>var bottlesOfBeer = 99;
+								var beersLeft = document.getElementById(&#39;beers-left&#39;);
+								var p;
+								while (bottlesOfBeer &gt;= 1) {
+								    p = document.createElement(&quot;p&quot;);
+								    p.innerHTML = bottlesOfBeer + &#39; bottles of beer on the wall&#39;;
+								    beersLeft.appendChild(p);
+								    bottlesOfBeer = bottlesOfBeer - 9;
+								}</code></pre>
+								<p>See the Pen <a href='http://codepen.io/danlucas/pen/ae928eca3b3dd6e175b81abd48cdca3b/'>Class 2 - Slide 16 - While Loops</a> by danlucas (<a href='http://codepen.io/danlucas'>@danlucas</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+								</div><script async src="//assets.codepen.io/assets/embed/ei.js"></script>
             </section>
             <section>
 				<h3>Infinite Loops</h3>
