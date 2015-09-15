@@ -297,30 +297,38 @@ if (age &gt;= 35) {
             <section>
                 <h3>For loops</h3>
                 <p>For loops are very similar, but you declare a counter in the statement.</p>
-                <pre><code>
-//will count 1 to 10
-for (var i = 1; i &lt;= 10; i++) {
-    console.log (i);
-}
-				</code></pre>
+								<div data-height="268" data-theme-id="7588" data-slug-hash="2123edeb2aa9add17715bb51b361f631" data-default-tab="js" data-user="danlucas" class='codepen'><pre><code>var iteration = document.getElementById(&#39;iteration&#39;);
+								var li;
+								//will count 1 to 10
+								for (var i = 1; i &lt;= 10; i++) {
+								  li = document.createElement(&#39;li&#39;);
+								  li.innerHTML = i;
+								  iteration.appendChild(li);
+								}</code></pre>
+								<p>See the Pen <a href='http://codepen.io/danlucas/pen/2123edeb2aa9add17715bb51b361f631/'>Class 2 - Slide 18 - For Loops</a> by danlucas (<a href='http://codepen.io/danlucas'>@danlucas</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+								</div><script async src="//assets.codepen.io/assets/embed/ei.js"></script>
             </section>
             <section>
                 <h3>Loops and logic</h3>
                 <p>You can add other statements or logical operators inside the loops.</p>
-                <pre><code>
+								<div data-height="385" data-theme-id="7588" data-slug-hash="392c50615b7d11f1218f3c8f2e168782" data-default-tab="js" data-user="danlucas" class='codepen'><pre><code>var buzzBang = document.getElementById(&#39;buzz-bang&#39;);
+var li;
 //Count from 1 to 50
 for (var i = 1; i &lt;= 50; i++) {
-    console.log (i);
-    //Says 'Buzz' after multiples of three
+    li = document.createElement(&#39;li&#39;);
+    li.innerHTML = i;
+    //Says &#39;Buzz&#39; after multiples of three
     if (i % 3 == 0) {
-        console.log (' Buzz');
+        li.innerHTML += &#39; Buzz&#39;;
     }
-    //Says 'Bang' after multiples of five
+    //Says &#39;Bang&#39; after multiples of five
     if (i % 5 == 0) {
-        console.log (' Bang');
+        li.innerHTML += &#39; Bang&#39;;
     }
-}
-				</code></pre>
+    buzzBang.appendChild(li);
+}</code></pre>
+<p>See the Pen <a href='http://codepen.io/danlucas/pen/392c50615b7d11f1218f3c8f2e168782/'>Class 2 - Slide 19 - Loops and Logic</a> by danlucas (<a href='http://codepen.io/danlucas'>@danlucas</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+</div><script async src="//assets.codepen.io/assets/embed/ei.js"></script>
             </section>
             <section>
                 <h3>Break</h3>
