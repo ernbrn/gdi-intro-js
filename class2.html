@@ -300,21 +300,22 @@ while (bottlesOfBeer &gt;= 1) {
             <section>
                 <h3>For loops</h3>
                 <p>For loops are very similar, but you declare a counter in the statement.</p>
-								<div data-height="268" data-theme-id="7588" data-slug-hash="2123edeb2aa9add17715bb51b361f631" data-default-tab="js" data-user="danlucas" class='codepen'><pre><code>var iteration = document.getElementById(&#39;iteration&#39;);
-								var li;
-								//will count 1 to 10
-								for (var i = 1; i &lt;= 10; i++) {
-								  li = document.createElement(&#39;li&#39;);
-								  li.innerHTML = i;
-								  iteration.appendChild(li);
-								}</code></pre>
-								<p>See the Pen <a href='http://codepen.io/danlucas/pen/2123edeb2aa9add17715bb51b361f631/'>Class 2 - Slide 18 - For Loops</a> by danlucas (<a href='http://codepen.io/danlucas'>@danlucas</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
-								</div><script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+								<div data-height="317" data-theme-id="18963" data-slug-hash="2123edeb2aa9add17715bb51b361f631" data-default-tab="js" data-user="danlucas" class='codepen'><pre><code>var iteration = document.getElementById(&#39;iteration&#39;);
+var li;
+
+//will count 1 to 10
+for (var i = 1; i &lt;= 10; i++) {
+  li = document.createElement(&#39;li&#39;);
+  li.innerHTML = i;
+  iteration.appendChild(li);
+}</code></pre>
+<p>See the Pen <a href='http://codepen.io/danlucas/pen/2123edeb2aa9add17715bb51b361f631/'>Class 2 - Slide 18 - For Loops</a> by danlucas (<a href='http://codepen.io/danlucas'>@danlucas</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+</div><script async src="//assets.codepen.io/assets/embed/ei.js"></script>
             </section>
             <section>
                 <h3>Loops and logic</h3>
                 <p>You can add other statements or logical operators inside the loops.</p>
-								<div data-height="385" data-theme-id="7588" data-slug-hash="392c50615b7d11f1218f3c8f2e168782" data-default-tab="js" data-user="danlucas" class='codepen'><pre><code>var buzzBang = document.getElementById(&#39;buzz-bang&#39;);
+								<div data-height="424" data-theme-id="18963" data-slug-hash="392c50615b7d11f1218f3c8f2e168782" data-default-tab="js" data-user="danlucas" class='codepen'><pre><code>var buzzBang = document.getElementById(&#39;buzz-bang&#39;);
 var li;
 //Count from 1 to 50
 for (var i = 1; i &lt;= 50; i++) {
@@ -336,7 +337,7 @@ for (var i = 1; i &lt;= 50; i++) {
             <section>
                 <h3>Break</h3>
                 <p>To exit a loop, use the break statement.</p>
-								<div data-height="268" data-theme-id="7588" data-slug-hash="b04d334b175ef98bc015a10cd3588671" data-default-tab="js" data-user="danlucas" class='codepen'><pre><code>var result = document.getElementById(&#39;result&#39;);
+								<div data-height="376" data-theme-id="18963" data-slug-hash="b04d334b175ef98bc015a10cd3588671" data-default-tab="js" data-user="danlucas" class='codepen'><pre><code>var result = document.getElementById(&#39;result&#39;);
 
 //Count from 100 to 200
 for (var i = 100; i &lt;= 200; i++) {
@@ -373,7 +374,7 @@ var myFavoriteThings = ['Broccoli', 1024, 'Sherlock'];
             <section>
                 <h3>Array Length</h3>
                 <p>The length property tells you how many things are in an array</p>
-								<div data-height="268" data-theme-id="7588" data-slug-hash="3c7e0f1feec80a59feda8caab26cd190" data-default-tab="js" data-user="danlucas" class='codepen'><pre><code>var rainbowColors = [&#39;Red&#39;, &#39;Orange&#39;, &#39;Yellow&#39;, &#39;Green&#39;,
+								<div data-height="247" data-theme-id="18963" data-slug-hash="3c7e0f1feec80a59feda8caab26cd190" data-default-tab="js" data-user="danlucas" class='codepen'><pre><code>var rainbowColors = [&#39;Red&#39;, &#39;Orange&#39;, &#39;Yellow&#39;, &#39;Green&#39;,
 &#39;Blue&#39;, &#39;Indigo&#39;, &#39;Violet&#39;];
 console.log(rainbowColors.length);
 
@@ -385,12 +386,10 @@ result.innerHTML = rainbowColors.length;</code></pre>
             <section>
                 <h3>Using Arrays</h3>
                 <p>You can access items with "bracket notation" by using the position of the object you want. Programmers start counting at zero.</p>
-								<div data-height="268" data-theme-id="7588" data-slug-hash="2272be7ca0f10fec9f04df870ff61723" data-default-tab="js" data-user="danlucas" class='codepen'><pre><code>var rainbowColors = [&#39;Red&#39;, &#39;Orange&#39;, &#39;Yellow&#39;, &#39;Green&#39;,
+								<div data-height="229" data-theme-id="18963" data-slug-hash="2272be7ca0f10fec9f04df870ff61723" data-default-tab="js" data-user="danlucas" class='codepen'><pre><code>var rainbowColors = [&#39;Red&#39;, &#39;Orange&#39;, &#39;Yellow&#39;, &#39;Green&#39;,
 &#39;Blue&#39;, &#39;Indigo&#39;, &#39;Violet&#39;];
 var firstColor = rainbowColors[0];
 var lastColor = rainbowColors[6];
-
-
 
 document.getElementById(&#39;result&#39;).innerHTML = firstColor;</code></pre>
 <p>See the Pen <a href='http://codepen.io/danlucas/pen/2272be7ca0f10fec9f04df870ff61723/'>Class 2 - Slide 24 - Using Arrays</a> by danlucas (<a href='http://codepen.io/danlucas'>@danlucas</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
