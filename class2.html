@@ -396,7 +396,7 @@ document.getElementById(&#39;result&#39;).innerHTML = firstColor;</code></pre>
             <section>
                 <h3>Changing arrays</h3>
                 <p>You can use bracket notation to change an item in an array</p>
-								<div data-height="268" data-theme-id="7588" data-slug-hash="ab631d59630d361fa8f7e6ef20c85b0b" data-default-tab="js" data-user="danlucas" class='codepen'><pre><code>var myFavoriteThings = [&#39;Broccoli&#39;, 1024, &#39;Sherlock&#39;];
+								<div data-height="275" data-theme-id="18963" data-slug-hash="ab631d59630d361fa8f7e6ef20c85b0b" data-default-tab="js" data-user="danlucas" class='codepen'><pre><code>var myFavoriteThings = [&#39;Broccoli&#39;, 1024, &#39;Sherlock&#39;];
 document.getElementById(&#39;results&#39;).innerHTML = myFavoriteThings[0];
 
 myFavoriteThings[0] = &#39;Asparagus&#39;;
@@ -420,9 +420,8 @@ myFavoriteThings.push('Dancing');
             <section>
                 <h3>Iterating through arrays</h3>
                 <p>Use a for loop to easily process each item in an array.</p>
-								<div data-height="268" data-theme-id="7588" data-slug-hash="8fe1917dae0ec0ea7134930d4ebd2855" data-default-tab="js" data-user="danlucas" class='codepen'><pre><code>var rainbowColors = [&#39;Red&#39;, &#39;Orange&#39;, &#39;Yellow&#39;, &#39;Green&#39;, &#39;Blue&#39;, &#39;Indigo&#39;, &#39;Violet&#39;];
+								<div data-height="263" data-theme-id="18963" data-slug-hash="8fe1917dae0ec0ea7134930d4ebd2855" data-default-tab="js" data-user="danlucas" class='codepen'><pre><code>var rainbowColors = [&#39;Red&#39;, &#39;Orange&#39;, &#39;Yellow&#39;, &#39;Green&#39;, &#39;Blue&#39;, &#39;Indigo&#39;, &#39;Violet&#39;];
 for (var i = 0; i &lt; rainbowColors.length; i++) {
-  console.log(rainbowColors[i]);
   var li = document.createElement(&#39;li&#39;);
   li.innerHTML = rainbowColors[i];
   document.getElementById(&#39;result&#39;).appendChild(li);
