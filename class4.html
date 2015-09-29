@@ -79,11 +79,11 @@ element.onclick = function () {
 			    <pre><code>
 &lt;button id="clickMe" onclick="sayHi()"&gt;Click Me!&lt;/button&gt;
 				</code></pre>
-                <pre><code>
-function sayHi() {
-    alert ('Hi!');
-}
-				</code></pre>
+				<div data-height="146" data-theme-id="18963" data-slug-hash="3385b60fe9d0f16dcac8a3543223f62c" data-default-tab="js" data-user="danlucas" class='codepen'><pre><code>function sayHi(){
+alert(&#39;Hi!&#39;);
+}</code></pre>
+<p>See the Pen <a href='http://codepen.io/danlucas/pen/3385b60fe9d0f16dcac8a3543223f62c/'>Class 4 - Slide 4 - Calling Functions from HTML</a> by danlucas (<a href='http://codepen.io/danlucas'>@danlucas</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+</div><script async src="//assets.codepen.io/assets/embed/ei.js"></script>
             </section>
             <section>
                 <h3>Listening Functions</h3>
@@ -92,11 +92,13 @@ function sayHi() {
 var myTarget = document.getElementById('clickMe');
                 </code></pre>
                 <p>Then add an event to that object:</p>
-                <pre><code>
-myTarget.onclick=function(){
-     alert ('Hi!');
-}
-                </code></pre>
+								<div data-height="199" data-theme-id="18963" data-slug-hash="de87fd22f6e079361cfccc0871cf77a7" data-default-tab="js" data-user="danlucas" class='codepen'><pre><code>var myTarget = document.getElementById(&#39;clickMe&#39;);
+
+myTarget.onclick = function(){
+  alert(&#39;Hi!&#39;);
+}</code></pre>
+<p>See the Pen <a href='http://codepen.io/danlucas/pen/de87fd22f6e079361cfccc0871cf77a7/'>Class 4 - Slide 5 - Calling Functions from HTML</a> by danlucas (<a href='http://codepen.io/danlucas'>@danlucas</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+</div><script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 			</section>
             <section>
 				<h3>Let's Develop It</h3>
@@ -119,16 +121,19 @@ element.onclick = function (event) {
 			<section>
 				<h3>This</h3>
 				<p>The keyword <code>this</code> references the element that the user has just interacted with:</p>
-                <pre><code>
-element.onmouseover = function (event) {
-  console.log(this);
-};
+				<div data-height="404" data-theme-id="18963" data-slug-hash="14ecbe35c966f467640654de9282890b" data-default-tab="js" data-user="danlucas" class='codepen'><pre><code>var mouseOverElem = document.getElementById(&#39;mouse-over-element&#39;);
+				var clickElem = document.getElementById(&#39;click-element&#39;);
 
-element.onclick = function (event) {
-  this.style.backgroundColor = 'red';
-  this.innerHTML = 'I've been clicked!';
-};
-				</code></pre>
+				mouseOverElem.onmouseover = function(event){
+				  console.log(this);
+				}
+
+				clickElem.onclick = function(event){
+				  this.style.backgroundColor = &#39;red&#39;;
+				  this.innerHTML = &#39;I\&#39;ve been clicked&#39;;
+				}</code></pre>
+				<p>See the Pen <a href='http://codepen.io/danlucas/pen/14ecbe35c966f467640654de9282890b/'>Class 4 - Slide 8 - THIS</a> by danlucas (<a href='http://codepen.io/danlucas'>@danlucas</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+				</div><script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 			</section>
             <section>
 				<h3>Let's Develop It</h3>
@@ -143,22 +148,28 @@ element.onclick = function (event) {
 			<section>
                 <h3>Forms</h3>
                 <p>You can collect information from users to use in functions. The most common method is an HTML form:</p>
-                <pre><code>
-&lt;form id="temperatureForm"&gt;
-    &lt;label for="temp"&gt;Temperature:&lt;/label&gt; &lt;input type="text" id="temp" size="3"/&gt; degrees in
-    &lt;input type="radio" name="tempFormat" value="F" checked /&gt;Fahrenheit
-    &lt;input type="radio" name="tempFormat" value="C" /&gt;Celsius &lt;br /&gt;
-    &lt;label for="submitButton"&gt;&lt;/label&gt; &lt;input id="tempSubmitButton" type="submit" value="Submit" /&gt;
-&lt;/form&gt;
-				</code></pre>
+								<div data-height="348" data-theme-id="18963" data-slug-hash="e231d4418e4fbc14edeec9d200ade40d" data-default-tab="html" data-user="danlucas" class='codepen'><pre><code>&lt;form id=&quot;temperatureForm&quot;&gt;
+    &lt;label for=&quot;temp&quot;&gt;Temperature:&lt;/label&gt; &lt;input type=&quot;text&quot; id=&quot;temp&quot; size=&quot;3&quot;/&gt; degrees in
+    &lt;input type=&quot;radio&quot; name=&quot;tempFormat&quot; value=&quot;F&quot; checked /&gt;Fahrenheit
+    &lt;input type=&quot;radio&quot; name=&quot;tempFormat&quot; value=&quot;C&quot; /&gt;Celsius &lt;br /&gt;
+    &lt;label for=&quot;submitButton&quot;&gt;&lt;/label&gt; &lt;input id=&quot;tempSubmitButton&quot; type=&quot;submit&quot; value=&quot;Submit&quot; /&gt;
+&lt;/form&gt;</code></pre>
+<p>See the Pen <a href='http://codepen.io/danlucas/pen/e231d4418e4fbc14edeec9d200ade40d/'>Class 4 - Forms`</a> by danlucas (<a href='http://codepen.io/danlucas'>@danlucas</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+</div><script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 			</section>
             <section>
                 <h3>Retrieving Form Data</h3>
-                <p>You retrieve the values of form elements using the <code>value</code> method:</p>
-                <pre><code>
-var temperature = document.getElementById('temp').value;
-console.log (temperature);
-				</code></pre>
+                <p>You retrieve the values of form elements using the <code>value</code> property:</p>
+								<div data-height="295" data-theme-id="18963" data-slug-hash="e231d4418e4fbc14edeec9d200ade40d" data-default-tab="js" data-user="danlucas" class='codepen'><pre><code>var temperature = document.getElementById(&#39;temp&#39;).value;
+var tempSubmitButton = document.getElementById(&#39;tempSubmitButton&#39;);
+
+tempSubmitButton.onclick = function(event){
+  event.preventDefault();
+  writeToScreen(&#39;result&#39;, temperature);
+}
+</code></pre>
+<p>See the Pen <a href='http://codepen.io/danlucas/pen/e231d4418e4fbc14edeec9d200ade40d/'>Class 4 - Forms</a> by danlucas (<a href='http://codepen.io/danlucas'>@danlucas</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+</div><script async src="//assets.codepen.io/assets/embed/ei.js"></script>
                 <p>You can retrieve the value of a form at any time. Try <code>onblur</code> (when a form element loses focus).</p>
 			</section>
             <section>
@@ -179,15 +190,16 @@ for (var i = 0, length = radios.length; i &lt; length; i++) {
              <section>
                 <h3>Submit buttons</h3>
                 <p>If you are going to retrieve form values with the submit button, be sure to prevent the default action!</p>
-                <pre><code>
-var submitButton = document.getElementById('tempSubmitButton');
-submitButton.onclick = function () {
-    event.preventDefault();
-    var temperature = document.getElementById('temp').value;
-    console.log (temperature);
+								<div data-height="295" data-theme-id="18963" data-slug-hash="e231d4418e4fbc14edeec9d200ade40d" data-default-tab="js" data-user="danlucas" class='codepen'><pre><code>var temperature = document.getElementById(&#39;temp&#39;).value;
+var tempSubmitButton = document.getElementById(&#39;tempSubmitButton&#39;);
+
+tempSubmitButton.onclick = function(event){
+  event.preventDefault();
+  writeToScreen(&#39;result&#39;, temperature);
 }
-<!--line 84 has a purple { opening bracket, but line 188 has a white } closing bracket. should they be the same color?-->
-				</code></pre>
+</code></pre>
+<p>See the Pen <a href='http://codepen.io/danlucas/pen/e231d4418e4fbc14edeec9d200ade40d/'>Class 4 - Forms</a> by danlucas (<a href='http://codepen.io/danlucas'>@danlucas</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+</div><script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 			</section>
             <section>
 				<h3>Let's Develop It</h3>
@@ -209,15 +221,14 @@ submitButton.onclick = function () {
 setInterval(function, milliseconds);
 				</code></pre>
                 <p>For example, this is a simple clock:</p>
-                <pre><code>
-var simpleClock = setInterval(myClock, 1000);
+								<div data-height="229" data-theme-id="18963" data-slug-hash="d6fef6d925bd2b551e125c3fb4b99ae6" data-default-tab="js" data-user="danlucas" class='codepen'><pre><code>var simpleClock = setInterval(myClock, 1000);
 function myClock() {
     var d = new Date();
     var t = d.toLocaleTimeString();
-    document.getElementById('resultsBox').innerHTML = t;
-}
-<!--line 214 has a purple { opening bracket, but line 218 has a white closing bracket, should it also be purple?}  -->
-				</code></pre>
+    document.getElementById(&#39;results&#39;).innerHTML = t;
+}</code></pre>
+<p>See the Pen <a href='http://codepen.io/danlucas/pen/d6fef6d925bd2b551e125c3fb4b99ae6/'>d6fef6d925bd2b551e125c3fb4b99ae6</a> by danlucas (<a href='http://codepen.io/danlucas'>@danlucas</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+</div><script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 			</section>
             <section>
 				<h3>clearInterval</h3>
@@ -226,12 +237,21 @@ function myClock() {
 clearInterval(intervalVariable)
 				</code></pre>
                 <p>To stop our clock:</p>
-                <pre><code>
+								<div data-height="274" data-theme-id="18963" data-slug-hash="7d086bfdf79f87b00ab151f3d78e356d" data-default-tab="js" data-user="danlucas" class='codepen'><pre><code>var simpleClock = setInterval(myClock, 1000);
+
+document.getElementById(&#39;stop-clock&#39;).onclick = myStopFunction;
+
 function myStopFunction() {
     clearInterval(simpleClock);
 }
-<!--line 230 has a purple opening bracket { but line 232 has a white } closing bracket, should they be the same color?  -->
-				</code></pre>
+
+function myClock() {
+    var d = new Date();
+    var t = d.toLocaleTimeString();
+    document.getElementById(&#39;results&#39;).innerHTML = t;
+}</code></pre>
+<p>See the Pen <a href='http://codepen.io/danlucas/pen/7d086bfdf79f87b00ab151f3d78e356d/'>7d086bfdf79f87b00ab151f3d78e356d</a> by danlucas (<a href='http://codepen.io/danlucas'>@danlucas</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+</div><script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 			</section>
             <section>
 				<h3>setTimeout</h3>
@@ -239,35 +259,39 @@ function myStopFunction() {
                 <pre><code>
 setTimeout(function, milliseconds);
 				</code></pre>
+			</section>
+			<section>
+				<h3>setTimeout</h3>
                 <p>For example, this code will wait 3 seconds, then create a popup box, unless the user triggers the <code>clearTimeout():</code></p>
-                <pre><code>
-var helloBox;
+								<div data-height="361" data-theme-id="18963" data-slug-hash="EVZybx" data-default-tab="js" data-user="danlucas" class='codepen'><pre><code>var helloBox;
 function sayHello() {
-    helloBox = setTimeout(function(){alert('Hello')},3000);
+    helloBox = setTimeout(function(){alert(&#39;Hello&#39;)},3000);
 }
 function dontSayIt() {
     clearTimeout(helloBox);
 }
-<!--line 245 and line 248 have purple opening brackets, but lines 247 and 250 have white closing brackets, should they all be the same colors?  -->
-				</code></pre>
+
+sayHello();
+</code></pre>
+<p>See the Pen <a href='http://codepen.io/danlucas/pen/EVZybx/'>EVZybx</a> by danlucas (<a href='http://codepen.io/danlucas'>@danlucas</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+</div><script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 			</section>
             <section>
 				<h3>Animations</h3>
 				<p>By changing values slowly over time, we can create simple animations:</p>
-                <pre><code>
-var targetPic = document.getElementById('turtlePic');
+				<div data-height="448" data-theme-id="18963" data-slug-hash="b784f2e4477781340d1d790fe0ce8d95" data-default-tab="js" data-user="danlucas" class='codepen'><pre><code>var targetPic = document.getElementById(&#39;turtlePic&#39;);
 targetPic.onclick = function () {
-    var leftMarginValue = 0;
-    function increaseMargin() {
-        leftMarginValue++  // update parameter each time
-        targetPic.style.marginLeft = leftMarginValue + 'px' //set left margin
-        if (leftMarginValue === 200)  // check finish condition {
-            clearInterval(movePic);
-        }
-    var movePic = setInterval(function(){increaseMargin()}, 10) // update every 10ms
+var leftMarginValue = 0;
+function increaseMargin() {
+leftMarginValue++  // update parameter each time
+targetPic.style.marginLeft = leftMarginValue + &#39;px&#39; //set left margin
+if (leftMarginValue === 200)  // check finish condition {
+		clearInterval(movePic);
 }
-<!--lines 259, and 261, have purple opening { brackets, lines 266, and 268} have white closing brackets. line 267 has a purple opening bracket { and a white closing bracket }, should these all match? -->
-				</code></pre>
+var movePic = setInterval(function(){increaseMargin()}, 10) // update every 10ms
+}</code></pre>
+<p>See the Pen <a href='http://codepen.io/danlucas/pen/b784f2e4477781340d1d790fe0ce8d95/'>b784f2e4477781340d1d790fe0ce8d95</a> by danlucas (<a href='http://codepen.io/danlucas'>@danlucas</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+</div><script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 			</section>
             <section>
 				<h3>Let's Develop It</h3>
