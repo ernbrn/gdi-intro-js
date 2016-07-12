@@ -17,6 +17,7 @@
 		<link rel="stylesheet" href="reveal/css/reveal.css">
 		<link rel="stylesheet" href="reveal/css/theme/gdidefault.css" id="theme">
 		<link rel="stylesheet" href="css/custom.css">
+        <link rel="stylesheet" href="css/prism.css">
 
 		<!-- For syntax highlighting -->
 		<!-- light editor<link rel="stylesheet" href="lib/css/light.css">-->
@@ -64,7 +65,7 @@
               <ul>
                 <li>Who are you?</li>
                 <li>What do you hope to get out of the class?</li>
-                <li>BONUS QUESTION: Favorite local restaurant?</li>
+                <li>BONUS QUESTION: ?</li>
               </ul>
               </div>
             </section>
@@ -105,7 +106,7 @@
             <section>
                 <h3>Let's Develop It</h3>
                 <p>Let's write your first JavaScript program. Make a folder called GDI. Inside, make a new page called index.html. Place this code inside.</p>
-                <pre><code>
+                <pre><code class="language-js">
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
     &lt;head&gt;
@@ -124,7 +125,7 @@
             <section>
                 <h3>Script Tags</h3>
                 <p>You can mix JavaScript and HTML. The script tag tells your browser the stuff inside is code, not content.</p>
-                <pre><code>
+                <pre><code class="language-js">
 &lt;script&gt;
     CODE GOES HERE
 &lt;/script&gt;
@@ -133,45 +134,41 @@
             <section>
                 <h3>JavaScript Files</h3>
                 <p>Just like CSS, you can split a long block of JavaScript into its own file. </p>
-                <pre><code>
+                <pre><code class="language-js">
 &lt;script src="path/to/file.js"&gt;&lt;/script&gt;
 				</code></pre>
             </section>
             <section>
                 <h3>Separating Instructions</h3>
                 <p>After each individual statement, you must add a semicolon.</p>
-                <pre><code>
-&lt;script&gt;
+                <pre><code class="language-js">
     console.log('Hello World!');
     console.log('I am glad to meet you');
     console.log('I am fuzzy');
-&lt;/script&gt;
 				</code></pre>
             </section>
             <section>
                 <h3>Comments</h3>
                 <p>You can leave comments in your code&mdash;notes that people can read and computers will ignore.</p>
-                <pre><code>
-&lt;script&gt;
+                <pre><code class="language-js">
     /*I can wrap long comments
     with multiple lines
     like this*/
     console.log('Hello World!'); //Or mark short comments like this
-&lt;/script&gt;
 				</code></pre>
             </section>
             <section>
                 <h3>Getting results onto your screen</h3>
                 <p>Open a popup box.</p>
-                <pre><code>
+                <pre><code class="language-js">
 alert('Hello World!');
 				</code></pre>
                 <p>Display a message in your console.</p>
-                <pre><code>
+                <pre><code class="language-js">
 console.log('Hello World!');
 				</code></pre>
                 <p>Add something to the page.</p>
-                <pre><code>
+                <pre><code class="language-js">
 document.write('Hello World!');
 				</code></pre>
             </section>
@@ -211,26 +208,20 @@ document.write('Hello World!');
             <section>
 				<h3>Declaring a Variable</h3>
                 <p>To declare (create) a variable, just type the word "var" and the variable name.</p>
-                <pre><code>
-&lt;script&gt;
-    var numberOfKittens;
-&lt;/script&gt;
+                <pre><code class="language-js">
+var numberOfKittens;
 				</code></pre>
                 <p>It is a good idea to give your variable a starting value. This is called initializing the variable.</p>
-                <pre><code>
-&lt;script&gt;
-    var numberOfKittens = 5;
-&lt;/script&gt;
+                <pre><code class="language-js">
+var numberOfKittens = 5;
 				</code></pre>
 			</section>
             <section>
 				<h3>Using a Variable</h3>
                 <p>Once you have created a variable, you can use it in your code. Just type the name of the variable.</p>
-                <pre><code>
-&lt;script&gt;
-    var numberOfKittens = 5;
-    console.log (numberOfKittens);
-&lt;/script&gt;
+                <pre><code class="language-js">
+var numberOfKittens = 5;
+console.log(numberOfKittens);
 				</code></pre>
 			</section>
             <section>
@@ -242,11 +233,9 @@ document.write('Hello World!');
             <section>
 				<h3>Numbers</h3>
                 <p>Variables can be numbers, either integers or floats (decimals).</p>
-                <pre><code>
-&lt;script&gt;
+                <pre><code class="language-js">
     var numberOfKittens = 5;
     var cutenessRating = 9.6;
-&lt;/script&gt;
 				</code></pre>
                 <p>The browser will automatically convert integers to floats if needed</p>
 			</section>
@@ -254,12 +243,10 @@ document.write('Hello World!');
             <section>
 				<h3>Arithmetic Operators</h3>
                 <p>Once you have numbers, you can do math with them!</p>
-                <pre><code>
-&lt;script&gt;
-    var numberOfKittens = 5;
-    var numberOfPuppies = 4;
-    var numberOfAnimals = numberOfKittens + numberOfPuppies;
-&lt;/script&gt;
+                <pre><code class="language-js">
+var numberOfKittens = 5;
+var numberOfPuppies = 4;
+var numberOfAnimals = numberOfKittens + numberOfPuppies;
 				</code></pre>
 			</section>
             <section>
@@ -314,39 +301,31 @@ document.write('Hello World!');
             <section>
                 <h3>Strings</h3>
                 <p>Variables can be strings, groups of characters. You put your string in quotes.</p>
-                <pre><code>
-&lt;script&gt;
-    var kittensName = 'Fluffy';
-&lt;/script&gt;
+                <pre><code class="language-js">
+var kittensName = 'Fluffy';
 				</code></pre>
                 <p>If you want to use a quote in your string, you'll need to "escape" it with a backslash.</p>
-                <pre><code>
-&lt;script&gt;
-    console.log('I\'d like to use an apostrophe');
-&lt;/script&gt;
+                <pre><code class="language-js">
+console.log('I\'d like to use an apostrophe');
 				</code></pre>
             </section>
 
             <section>
                 <h3>String Operators</h3>
                 <p>You can put strings together with a +, the concatenation operator.</p>
-                <pre><code>
-&lt;script&gt;
-    var kittensName = 'Fluffy ';
-    var fullName = kittensName + ' McDougle';
-    console.log(fullName); //Outputs 'Fluffy McDougle'
-&lt;/script&gt;
+                <pre><code class="language-js">
+var kittensName = 'Fluffy ';
+var fullName = kittensName + ' McDougle';
+console.log(fullName); //Outputs 'Fluffy McDougle'
 				</code></pre>
             </section>
             <section>
                 <h3>String Operators</h3>
                 <p>You can also use += to add things to the end of a string.</p>
-                <pre><code>
-&lt;script&gt;
-    var kittensName = 'Admiral ';
-    kittensName += ' Snuggles';
-    console.log(kittensName); //Outputs 'Admiral Snuggles'
-&lt;/script&gt;
+                <pre><code class="language-js">
+var kittensName = 'Admiral ';
+kittensName += ' Snuggles';
+console.log(kittensName); //Outputs 'Admiral Snuggles'
 				</code></pre>
             </section>
 
@@ -357,60 +336,59 @@ document.write('Hello World!');
 
             <section>
                 <h3>Functions</h3>
-                <p>Functions are separable, reusable pieces of code.
+                <p>A function is a named part of a program that performs a specific task (a routine).</p>
 
             </section>
             <section>
                 <h3>Using Functions</h3>
                 <p>First, declare the function.</p>
-                <pre><code>
-&lt;script&gt;
-    function turtleFact() {
-        console.log('A turtle\'s lower shell is called a plastron.');
-    }
-&lt;/script&gt;
+                <pre><code class="language-js">
+function logTurtleFact() {
+    console.log('A turtle\'s lower shell is called a plastron.');
+}
 				</code></pre>
                 <p>Then, use it as many times as you want!</p>
-                <pre><code>
-&lt;script&gt;
-    turtleFact();
-&lt;/script&gt;
+                <pre><code class="language-js">
+logTurtleFact();
 				</code></pre>
             </section>
             <section>
                 <h3>Arguments</h3>
-                <p>Functions can accept input values, called arguments.</p>
-                <pre><code>
-&lt;script&gt;
-    function callKitten (kittenName){
-        console.log('Come here, ' + kittenName + '!');
-    }
-    callKitten ('Fluffy'); //outputs 'Come here, Fluffy!'
+                <p>
+                    You can give functions specific instructions or values, referred to as
+                    arguments.
+                </p>
+                <pre><code class="language-js">
+function callKitten(kittenName){
+    console.log('Come here, ' + kittenName + '!');
+}
+callKitten('Fluffy'); //outputs 'Come here, Fluffy!'
 
-    function addNumbers(a, b) {
-        console.log(a + b);
-    }
-    addNumbers(5,7); //outputs 12
-    addNumbers(9,12); //outputs 21
-&lt;/script&gt;
+function addNumbers(a, b) {
+    console.log(a + b);
+}
+addNumbers(5,7); //outputs 12
+addNumbers(9,12); //outputs 21
 				</code></pre>
             </section>
             <section>
                 <h3>Arguments</h3>
-                <p>You can also pass variables into functions. These variables do not need to have the same name as the function arguments.</p>
-                <pre><code>
-&lt;script&gt;
-    function addOne(inputNumber){
-        var newNumber = inputNumber + 1;
-        console.log('&lt;p&gt;You now have ' + newNumber);
-    }
-    //Declare variables
-    var numberOfKittens = 5;
-    var numberOfPuppies = 4;
-    //Use them in functions
-    addOne(numberOfKittens);
-    addOne(numberOfPuppies);
-&lt;/script&gt;
+                <p>
+                    A value you might give a function could be a variable.
+                    When the function receives these values, it can name them as it pleases.
+                    The variables passed to the function do not need to have the same name as the arguments.
+                </p>
+                <pre><code class="language-js">
+function addOne(inputNumber){
+    var newNumber = inputNumber + 1;
+    console.log('&lt;p&gt;You now have ' + newNumber);
+}
+//Declare variables
+var numberOfKittens = 5;
+var numberOfPuppies = 4;
+//Use them in functions
+addOne(numberOfKittens);
+addOne(numberOfPuppies);
 				</code></pre>
             </section>
             <section>
@@ -420,14 +398,12 @@ document.write('Hello World!');
             <section>
                 <h3>Returning Values</h3>
                 <p>You can have a function give you back a value, to use later.</p>
-                <pre><code>
-&lt;script&gt;
-    function square(num) {
-        return num * num;
-    }
-    console.log(square(4));   // outputs '16'.
-    var squareOfFive = square(5); // will make squareOfFive equal 25.
-&lt;/script&gt;
+                <pre><code class="language-js">
+function square(num) {
+    return num * num;
+}
+console.log(square(4));   // outputs '16'.
+var squareOfFive = square(5); // will make squareOfFive equal 25.
 				</code></pre>
                 <p>Return will immediately end a function.</p>
             </section>
@@ -457,6 +433,7 @@ document.write('Hello World!');
 
 		<script src="reveal/lib/js/head.min.js"></script>
 		<script src="reveal/js/reveal.min.js"></script>
+        <script src="prism.js"></script>
 
 		<script>
 
@@ -476,7 +453,7 @@ document.write('Hello World!');
 					{ src: 'reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
 					{ src: 'reveal/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 					{ src: 'reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'prism.js', async: true, callback: function() { return Prism.highlightAll(true); } },
 					{ src: 'reveal/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
 					{ src: 'reveal/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
 				]
