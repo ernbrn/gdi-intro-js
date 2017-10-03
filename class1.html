@@ -65,7 +65,7 @@
               <ul>
                 <li>Who are you?</li>
                 <li>What do you hope to get out of the class?</li>
-                <li>BONUS QUESTION: ?</li>
+                <li>What is your favorite restaurant in the Triangle?</li>
               </ul>
               </div>
             </section>
@@ -98,9 +98,9 @@
 				<h3>Why JavaScript?</h3>
 				<ul>
 					<li>JavaScript interfaces with HTML and CSS.</li>
-					<li>With JavaScript, you can write code once ause it everywhere. Remember, you want DRY codDon't Repeat Yourself).</li>
-					<li>JavaScript lets you build dynamic webpagthat respond to input from users.</li>
-                             <li>Animates, adds, updates, slides, collapsecreates plugins, and more!</li>
+					<li>With JavaScript, you can write code once and use it everywhere. DRY (Don't Repeat Yourself).</li>
+					<li>JavaScript lets you build dynamic webpages that respond to input from users.</li>
+                             <li>Animations, single page applications, and more!</li>
 				</ul>
 			</section>
             <section>
@@ -121,6 +121,11 @@
 &lt;/html&gt;
 				</code></pre>
             </section>
+            <section>
+                <h3>Let's Develop It</h3>
+                <p>Once you've copied that code, open index.html. It should open in a browser and run your javascript!</p>
+            </section>
+            <section>
 
             <section>
                 <h3>Script Tags</h3>
@@ -133,14 +138,18 @@
             </section>
             <section>
                 <h3>JavaScript Files</h3>
-                <p>Just like CSS, you can split a long block of JavaScript into its own file. </p>
+                <p>Just like CSS, you can split a long block of JavaScript into its own file and include it with an HTML tag. </p>
                 <pre><code class="language-js">
 &lt;script src="path/to/file.js"&gt;&lt;/script&gt;
 				</code></pre>
             </section>
             <section>
+                <h3>Some JavaScript things</h3>
+                <p>Let's go through some JavaScript concepts</p>
+            </section>
+            <section>
                 <h3>Separating Instructions</h3>
-                <p>After each individual statement, you must add a semicolon.</p>
+                <p>After each individual statement, it is reccomended (but not necessary!) add a semicolon.</p>
                 <pre><code class="language-js">
     console.log('Hello World!');
     console.log('I am glad to meet you');
@@ -149,7 +158,7 @@
             </section>
             <section>
                 <h3>Comments</h3>
-                <p>You can leave comments in your code&mdash;notes that people can read and computers will ignore.</p>
+                <p>You can leave comments in your code. Comments are notes that people can read and computers will ignore.</p>
                 <pre><code class="language-js">
     /*I can wrap long comments
     with multiple lines
@@ -226,7 +235,7 @@ console.log(numberOfKittens);
 			</section>
             <section>
 				<h3>Let's Develop It</h3>
-                <p>In your JS file, create a variable and give it a valid name and a value. Then, display the value.</p>
+                <p>In your JS file (mycode.js), create a variable and give it a valid name and a value. Then, display the value (with an alert or a console.log.)</p>
 			</section>
 
 
@@ -300,13 +309,17 @@ var numberOfAnimals = numberOfKittens + numberOfPuppies;
 
             <section>
                 <h3>Strings</h3>
-                <p>Variables can be strings, groups of characters. You put your string in quotes.</p>
+                <p>Variables can be strings. Strings are groups of characters. You put your string in quotes. In JavaScript you can use a single quote (') or a double quote (").</p>
                 <pre><code class="language-js">
 var kittensName = 'Fluffy';
 				</code></pre>
                 <p>If you want to use a quote in your string, you'll need to "escape" it with a backslash.</p>
                 <pre><code class="language-js">
 console.log('I\'d like to use an apostrophe');
+                </code></pre>
+                Or, just use a double quote for your string:
+                <pre><code class="language-js">
+console.log("I'd like to use an apostrophe");
 				</code></pre>
             </section>
 
@@ -326,6 +339,8 @@ console.log(fullName); //Outputs 'Fluffy McDougle'
 var kittensName = 'Admiral ';
 kittensName += ' Snuggles';
 console.log(kittensName); //Outputs 'Admiral Snuggles'
+// This code is equal to:
+kittensName = kittensName + ' Snuggles';
 				</code></pre>
             </section>
 
@@ -355,7 +370,7 @@ logTurtleFact();
             <section>
                 <h3>Arguments</h3>
                 <p>
-                    You can give functions specific instructions or values, referred to as
+                    You can give functions specific values, referred to as
                     arguments.
                 </p>
                 <pre><code class="language-js">
@@ -381,7 +396,7 @@ addNumbers(9,12); //outputs 21
                 <pre><code class="language-js">
 function addOne(inputNumber){
     var newNumber = inputNumber + 1;
-    console.log('&lt;p&gt;You now have ' + newNumber);
+    console.log('You now have ' + newNumber);
 }
 //Declare variables
 var numberOfKittens = 5;
@@ -393,7 +408,8 @@ addOne(numberOfPuppies);
             </section>
             <section>
 				<h3>Let's Develop It</h3>
-                <p>Turn the code you wrote to output someone's full name into a function, then use it.</p>
+                <p>Turn the code you wrote to output someone's full name into a function. The function should accept 2 arguments: the first name, and the last name.</p>
+                <p>Don't forget to call the function with your own name!</p>
 			</section>
             <section>
                 <h3>Returning Values</h3>
@@ -401,11 +417,25 @@ addOne(numberOfPuppies);
                 <pre><code class="language-js">
 function square(num) {
     return num * num;
+    // any code here won't run!
 }
 console.log(square(4));   // outputs '16'.
+				</code></pre>
+                <p>A function will immediately exit on a 'return'</p>
+            </section>
+            <section>
+                <h3>Returning Values</h3>
+                <p>You can assign a variable the return value of a function!</p>
+                <pre><code class="language-js">
+function square(num) {
+    return num * num;
+    // any code here won't run!
+}
+var mySquare = square(4);
+console.log(mySquare); // outputs '16'.
 var squareOfFive = square(5); // will make squareOfFive equal 25.
 				</code></pre>
-                <p>Return will immediately end a function.</p>
+                <p>A function will immediately exit on a 'return'</p>
             </section>
             <section>
 				<h3>Let's Develop It</h3>
